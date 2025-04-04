@@ -3,8 +3,23 @@
 This application displays the top 100 movies (from IMDb) and allows you to search by movie position or title (wildcards supported). It features a web-based UI using Flask and also provides an API endpoint for HTTP requests.
 
 ## Folder Structure
-
-imdb-top-movies/ ├── app/ # Web UI code │ ├── init.py │ ├── routes.py │ └── templates/ │ └── index.html ├── api/ # API code │ ├── init.py │ └── routes.py ├── data/ │ └── movies.json # JSON file with movie data (update with top 100 movies) ├── k8s/ │ └── deployment.yaml # Kubernetes deployment file ├── main.py # Main Flask application file ├── requirements.txt # Python dependencies ├── Dockerfile # Docker configuration └── README.md # This documentation file
+imdb-top-movies/
+├── app/                       # Web UI application code
+│   ├── __init__.py          # Initializes the Flask Blueprint for the web UI
+│   ├── routes.py            # Contains the UI routes
+│   └── templates/           # HTML templates
+│       └── index.html       # Main page template
+├── api/                       # API application code
+│   ├── __init__.py          # Initializes the Flask Blueprint for the API
+│   └── routes.py            # Contains the API endpoints
+├── data/                      # Data folder
+│   └── movies.json          # JSON file with the list of movies
+├── k8s/                       # Kubernetes deployment files
+│   └── deployment.yaml      # Kubernetes Deployment and Service definitions
+├── main.py                  # Main file to start the Flask application
+├── requirements.txt         # Python dependencies
+├── Dockerfile               # Docker configuration for containerizing the application
+└── README.md                # Application documentation and tutorial
 
 
 ## Running Locally
